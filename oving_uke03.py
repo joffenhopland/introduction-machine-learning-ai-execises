@@ -145,7 +145,7 @@ class MyLinkedList:
             self.first = MyNode(item)
             self.last = self.first
         else:
-            self.last.set_next(MyNode(item, self.last))
+            self.last.set_next(MyNode(item, prev=self.last))
             self.last = self.last.get_next()
         self.size += 1
 
